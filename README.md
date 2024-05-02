@@ -29,6 +29,7 @@ Users should be able to:
 I completed this project on Scrimba back in September 2023 when I was first learning React and wanted to include it here for reference.
 
 - useId()
+- An async function cannot be directly passed into useEffect because it automatically returns a Promise, and if a function passed into useEffect should either return nothing or a cleanup function. So the async function should be passed into useEffect inside an anonymous function.
 
 ### Useful resources
 
