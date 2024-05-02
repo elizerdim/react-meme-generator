@@ -28,6 +28,8 @@ Users should be able to:
 
 I completed this project on Scrimba back in September 2023 when I was first learning React and wanted to include it here for reference.
 
+- useId()
+
 ### Useful resources
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.

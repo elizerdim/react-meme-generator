@@ -32,9 +32,33 @@ main {
 
 .form {
   display: grid;
-  grid-template: 40px 40px / 1fr 1fr;
+  grid-template: repeat(3, 40px) / 1fr 1fr;
   gap: 17px;
   margin-bottom: 17px;
+}
+
+.top-text-label {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.top-text-input {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.bottom-text-label {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.bottom-text-input {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.form--label {
+  align-self: end;
 }
 
 .form--input {
