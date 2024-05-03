@@ -30,6 +30,7 @@ I completed this project on Scrimba back in September 2023 when I was first lear
 
 - useId()
 - An async function cannot be directly passed into useEffect because it automatically returns a Promise, and if a function passed into useEffect should either return nothing or a cleanup function. So the async function should be passed into useEffect inside an anonymous function.
+- How to access and use input text value to render it in another element in real time by using state
 
 ### Useful resources
 

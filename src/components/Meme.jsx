@@ -18,9 +18,6 @@ export default function Meme() {
 // Therefore, if you want to use async operations inside of useEffect,
 // you need to define the function separately inside of the callback
 // function, as seen below:
-
-// https://api.imgflip.com/get_memes
-
   useEffect(() => {
     async function getMemes() {
       const res = await fetch("https://api.imgflip.com/get_memes");
@@ -34,6 +31,11 @@ export default function Meme() {
     const randomNumber = Math.floor(Math.random() * allMemes.length);
     const url = allMemes[randomNumber].url;
     setMeme({...meme, randomImage: url})
+  }
+
+  function updateMemeText(e) {
+    const { name, value } = e.target;
+    setMeme({...meme, [name]: value});
   }
 
   const id = useId();
@@ -53,6 +55,8 @@ export default function Meme() {
           className="form--input top-text-input"
           placeholder="one does not simply"
           name="topText"
+          value={meme.topText}
+          onChange={updateMemeText}
         />
         <label 
           htmlFor={id + "bottom-text"} 
@@ -66,6 +70,8 @@ export default function Meme() {
           className="form--input bottom-text-input" 
           placeholder="walk into mordor"
           name="bottomText"
+          value={meme.bottomText}
+          onChange={updateMemeText}
         />
         <button 
           className="form--button"
